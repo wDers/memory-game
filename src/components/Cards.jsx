@@ -38,7 +38,7 @@ function Cards(props) {
   }
 
   function check(current, value) {
-    if (items[current].id == items[prev].id) {
+    if (items[current].id === items[prev].id) {
       handleCorrect();
     } else {
       handleWrong();
@@ -67,7 +67,7 @@ function Cards(props) {
 
   const handleLock = (value) => {
     for (value of items) {
-      if (value["stat"] == "") {
+      if (value["stat"] === "") {
         value["stat"] = "locked";
       }
     }
@@ -75,7 +75,7 @@ function Cards(props) {
 
   const handleUnlock = (value) => {
     for (value of items) {
-      if (value["stat"] == "locked") {
+      if (value["stat"] === "locked") {
         value["stat"] = "";
       }
     }
